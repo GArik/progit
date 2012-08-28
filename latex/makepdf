@@ -61,7 +61,7 @@ end
 def pre_pandoc(string, config)
 	replace(string) do
 		# Pandoc discards #### subsubsections #### - this hack recovers them
-		s /\#\#\#\# (.*?) \#\#\#\#/, 'SUBSUBSECTION: \1'
+		s /\#\#\#\#\#\#\#\#\#\#\#\# (.*?) \#\#\#\#\#\#\#\#\#\#\#\#/, 'SUBSUBSECTION: \1'
 
 		# Turns URLs into clickable links
 		s /\`(http:\/\/[A-Za-z0-9\/\%\&\=\-\_\\\.]+)\`/, '<\1>'
