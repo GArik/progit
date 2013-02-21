@@ -1,4 +1,4 @@
-\documentclass[a4paper]{book}
+\documentclass[a4paper,russian]{book}
 \usepackage[
 	%urlbordercolor = {1 1 1},
 	%linkbordercolor = {1 1 1},
@@ -9,15 +9,18 @@
 	linkcolor = black]{hyperref}
 \usepackage{graphicx}
 \usepackage{xltxtra}
+\usepackage{polyglossia}
 \usepackage{fancyhdr}
 \usepackage{booktabs}
 \usepackage{indentfirst}
 \usepackage{framed,color}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
 
 \definecolor{shadecolor}{gray}{0.90}
 
 \setromanfont[Mapping=tex-text,BoldFont=<%= config['bold'] %>]{<%= config['font'] %>}
-\setmonofont[Scale=.85]{<%= config['mono'] %>}
+\setmonofont{<%= config['mono'] %>}
 
 \XeTeXlinebreaklocale{<%= lang %>}
 <%= config['langrule'] %>
@@ -25,7 +28,7 @@
 \settowidth{\parindent}{<%= config['indent'] %>}
 
 \title{Pro Git}
-\author{Scott Chacon}
+\author{Скот Чакон}
 
 \makeatletter
 \let\savedauthor=\@author
